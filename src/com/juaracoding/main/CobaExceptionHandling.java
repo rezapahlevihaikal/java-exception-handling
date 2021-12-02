@@ -1,5 +1,7 @@
 package com.juaracoding.main;
 
+import java.util.Scanner;
+
 public class CobaExceptionHandling {
 	public static void main(String [] args) {
 //		method1();
@@ -17,9 +19,11 @@ public class CobaExceptionHandling {
 		
 //		masKoswaraDua();
 		
-		masKoswaraTiga();
+//		masKoswaraTiga();
 		
 //		masKoswaraEmpat();
+		
+		validasi();
 	}
 	
 	static void method1() {
@@ -143,6 +147,20 @@ public class CobaExceptionHandling {
 		catch(Exception e) {
 //			System.out.println(e);
 			System.out.println("Exception Parent");
+		}
+		
+	}
+	
+	static void validasi() {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Masukkan data usia : ");
+		int usia = scan.nextInt();
+		
+		if(usia < 19) {
+			throw new ArithmeticException("Belum cukup usia");
+		}
+		else {
+			System.out.print("GAS UDEH MASUK CEPET!!");
 		}
 	}
 	
